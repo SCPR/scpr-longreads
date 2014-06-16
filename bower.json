@@ -1,0 +1,9 @@
+{
+  "name": "scpr-longreads",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {}
+}
