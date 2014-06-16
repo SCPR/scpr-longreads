@@ -1,0 +1,77 @@
+doctype html
+html lang="en" 
+  head
+    title == yield_content(:page_title)
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta content="yes" name="apple-mobile-web-app-capable"
+    meta content="black" name="apple-mobile-web-app-status-bar-style"
+    meta content="telephone=no" name="format-detection"
+    meta content="IE=Edge" http-equiv="X-UA-Compatible"
+    meta content="#{current_page.data.description}" name="description"
+    meta content="#{current_page.data.keywords}" name="keywords"
+    meta content="89.3 KPCC" name="author"
+    meta content="#{current_page.data.title}: #{current_page.data.subtitle}" property="og:title"
+    meta content="89.3 KPCC" property="og:site_name"
+    meta content="website" property="og:type" 
+    meta content="http://projects.scpr.org/static/longreads#{current_page.url}images/meta/opengraph.jpg" property="og:image"
+    meta content="http://projects.scpr.org/static/longreads#{current_page.url}" property="og:url"
+    meta content="#{current_page.data.description}" property="og:description"
+    // build:css(.tmp) styles/main.css
+    link href="fonts/fonts.css" media="screen" rel="stylesheet"
+    link href="styles/canon.css" rel="stylesheet"
+    // endbuild
+    
+    ==javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"
+
+    script src="//use.typekit.net/ucx7epr.js" type="text/javascript" 
+    javascript:
+      try{Typekit.load();}catch(e){}    
+
+    link href="http://www.scpr.org/favicon.ico" rel="shortcut icon" type="image/x-icon"
+
+    // [if lt IE 9]
+      script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
+      link href="styles/obsolescence.css" media="screen" rel="stylesheet"
+    // Additional Scripts
+    
+    =partial "document_header"
+
+  body class=(page_classes)
+    // Page Titling and Global Nav
+    header.titling
+      .bound.inner
+        h1 = current_page.data.title
+        h2 = current_page.data.subtitle 
+        .credits
+          - current_page.data.credits.each do |c|
+            =partial(:credit, :locals => { :name => c.name, :role => c.role })
+
+        // Global Nav
+        =partial "page_nav"
+        aside.share
+          ul.cf
+            li: a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads%2F{{basename}}&amp;via=kpcc"  Share via Twitter
+            li: a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads%2F{{basename}}"  Share via Facebook
+
+    // The body of the page
+    == yield
+
+    // Page Footer
+    =partial "page_footer"
+
+    //Load JQ after page content
+    ==javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    javascript:
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-2.1.1.min.js"><\/script>')
+
+    //Load page-specific JS
+    == yield_content(:document_footer)
+
+    // ANALYTICS
+    // Google Analytics
+    javascript:
+      var _gaq=[['_setAccount','UA-624724-1'],['_setDomainName', 'scpr.org'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
