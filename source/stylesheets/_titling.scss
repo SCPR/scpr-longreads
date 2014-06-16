@@ -1,0 +1,76 @@
+/*
+================================================================
+TITLING
+================================================================ */
+.titling {
+    background: black;
+    color: white;
+    font-family: $font-prox;
+    padding: 28px 0 290px;
+    .inner              { position: relative; padding: 232px 0 0; outline: 1px solid aqua; }
+
+    h1                  { font-size: 4.375em; text-transform: uppercase; font-weight: 900; line-height: 0.85; }
+    h2                  { font-family: $font-freight; font-size: 1.5em; line-height: 1; font-weight: 300; margin-bottom: 90px; }
+
+    .credits {
+        dl {
+            margin-bottom: 10px;
+            position: relative;
+            outline: 1px solid orange;
+            padding-left: 111px;
+            dt              { display: block; position: absolute; top: 0.35em; left: 0; text-transform: uppercase; font-size: 0.75em; }
+            dd              { font-family: $font-freight; font-size: 0.875em; color: #aeaeae; }
+            &:last-child    { margin-bottom: 0; }
+            a:hover         { color: white; text-decoration: underline; }
+        }
+    }
+
+    .station,.share,h3  { position: absolute; outline: 1px solid aqua; }
+    h3 {
+        top: 0;
+        left: 0;
+        width: 111px;
+        height: 16px;
+        background: green;
+    }
+    .share {
+        right: 0;
+        bottom: 0;
+        li {
+            display: inline;
+            a {
+                @include texthide;
+                background-color: green;
+                width: 30px;
+                height: 30px;
+                float: left;
+                margin-right: 10px;
+            }
+            &:last-child a      { margin-right: 0; }
+        }
+    }
+    .station {
+        right: 0;
+        top: 0;
+        text-transform: uppercase;
+        color: #727272;
+        font-size: 0.875em; // 14 / 16
+        & > ul > li {
+            display: inline;
+            position: relative;
+            outline: 1px solid yellow;
+            mark {
+                display: inline-block;
+                background: yellow;
+                margin-right: 20px;
+            }
+            &:last-child mark {
+                margin-right: 0;
+            }
+            & > ul {
+                position: absolute;
+                background: purple;
+            }
+        }
+    }
+}

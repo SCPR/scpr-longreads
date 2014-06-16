@@ -1,0 +1,82 @@
+/*
+################################################################################################
+################################################################################################
+------------------------------------------------------------------------------------------------
+MEMBERSHIP
+------------------------------------------------------------------------------------------------
+Standard, evergreen, shows-up-right-before-the-footer membership appeal.
+################################################################################################
+################################################################################################ */
+
+.membership {
+    background: #2ea2cc image-url("../images/global/backdrop-bluecity.jpg") no-repeat center top;
+    background-size: auto 100%;
+    color: white;
+    box-shadow: 0 -8px 0 rgba(0,0,0,0.13);
+    .inner {
+        padding: 60px 0 56px;
+        position: relative;
+        h1 {
+            font-family: $font-prox;
+            font-weight: 700;
+            font-size: 2.125em; // 34/16
+            line-height: 1.18;
+            margin: 0 200px 27px 0;
+        }
+        h2 {
+            font-family: $font-merri-light-ital;
+            font-size: 1.375em; // 22/16
+            a { text-decoration: underline; }
+        }
+        .brand {
+            position: absolute;
+            right: 0;
+            top: 75px;
+            width: 153px;
+            height: 23px;
+            a {
+                @include mask;
+                background: image-url("../images/global/logo-kpcc-white.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+
+//  ----------------------------------------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 1023px) {
+
+        .membership {
+            .inner {
+                padding: 50px 0 46px;
+                position: relative;
+                h1      { font-size: 1.5em; }
+                h2      { font-size: 1em; }
+                .brand  { top: 57px; }
+            }
+        }
+
+    }
+
+//  ----------------------------------------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 720px) {
+
+        .membership {
+            .inner {
+                padding: 45px 0 41px;
+                position: relative;
+                text-align: center;
+                h1      { font-size: 1.2em; margin: 0 0 20px 0; }
+                h2      {
+                    font-size: 1em;
+                    margin-bottom: 25px;
+                    span {
+                        display: block;
+                    }
+                }
+                .brand  { position: static; margin: 0 auto; }
+            }
+        }
+
+    }

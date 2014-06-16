@@ -1,0 +1,147 @@
+/*
+================================================================
+FONTS
+================================================================ */
+
+/*
+------------------------------
+    FREIGHT SANS
+------------------------------
+    Light           300 normal
+    Light Italic    300 italic
+    Book            400 normal
+    Book Italic     400 italic
+    Bold            700 normal
+----------------------------*/
+
+    $font-freight: "freight-sans-pro", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+/*
+------------------------------
+    PROXIMA NOVA
+------------------------------
+    Bold            700 normal
+    Black           900 normal
+----------------------------*/
+
+    $font-prox: "proxima-nova", "Avenir", "Avenir Next", Helvetica, Arial, sans-serif;
+
+/*
+------------------------------
+    COURIER
+------------------------------*/
+
+    $font-courier: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+/*
+------------------------------
+    MERRIWEATHER
+------------------------------*/
+
+    $font-merri: "merriweatherregular", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    $font-merri-bold: "merriweatherbold", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    $font-merri-bold-ital: "merriweatherbold_italic", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    $font-merri-ital: "merriweatheritalic", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    $font-merri-light: "merriweatherlight", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    $font-merri-light-ital: "merriweatherlight_italic", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+
+
+
+
+/*
+================================================================
+VARIABLES
+================================================================ */
+$white:       #FFFFFF;
+$nearWhite:   #F6F6F6;
+$lightGray:   #E8E8E8;
+$medGray:     #898989;
+$darkGray:    #363636;
+$nearBlack:   #212121;
+$black:       #000000;
+
+$kpccOrange:  #F87E21;
+$deepOrange:  #D15904;
+$kpccBlue:    #31ABD4;
+$deepBlue:    #007397;
+
+$c2: 14.615384615385%; // 190 / 1300
+$c3: 23.153846153846%; // 301 / 1300
+$c4: 31.692307692308%; // 412 / 1300
+$c5: 40.230769230769%; // 523 / 1300
+$c6: 48.769230769231%; // 634 / 1300
+$c7: 57.307692307692%; // 745 / 1300
+$c8: 65.846153846154%; // 856 / 1300
+$c9: 74.384615384615%; // 967 / 1300
+$c10: 82.923076923077%; // 1078 / 1300
+
+
+
+/*
+================================================================
+MIXINS
+================================================================ */
+@mixin texthide {
+  display: block;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+@mixin mask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+
+
+
+
+/*
+================================================================
+COMMON UTILITIES
+================================================================ */
+
+//  Micro Clearfix
+//  Credit: http://www.positioniseverything.net/easyclearing.html
+.cf:before,
+.cf:after       { content: " "; /* 1 */ display: table; /* 2 */ }
+.cf:after       { clear: both; }
+
+
+// Everyone but older IE is beloved and welcome here
+.obsolescence {
+    display: none;
+}
+
+
+// Bounds
+.bound {
+    width: 92%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+// Forced aspect ratio
+.ratio {
+  position: relative;
+  .fill {
+    padding-top: 66.6666%;
+  }
+  .img-contain {
+    display: block;
+    position: absolute;
+    top:0;left:0;bottom:0;right:0;
+    background: black;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

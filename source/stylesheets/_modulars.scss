@@ -1,0 +1,51 @@
+/*
+================================================================
+WELL, LET'S GET TO IT
+================================================================ */
+body {
+    background: white;
+    font-size: 100%;
+    font-style: normal;
+    color: black;
+    font-weight: 400;
+    font-family: $font-merri;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+/*
+================================================================
+PROSE DEFAULTS
+================================================================ */
+.prose {
+    em      { font-style: normal; font-family: $font-merri-ital; }
+    strong  { font-weight: normal; font-family: $font-merri-bold; }
+}
+
+
+
+
+/*
+================================================================
+CHAPTER HEADERS
+================================================================ */
+.chapter {
+    color: white;
+    background: #7a2323;
+    padding: 140px 0 57px;
+    margin-bottom: 80px;
+}
+
+/*
+================================================================
+SIDEBARS
+================================================================ */
+.sidebar {
+    background: $lightGray;
+    header {
+        background: #8e1616;
+        color: $white;
+    }
+}
