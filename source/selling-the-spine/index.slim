@@ -6,6 +6,13 @@ keywords: 'PODs, spinal surgery, unnecessary surgery, doctor conflict of interes
 credits: 
     - { role: Reporting, name: Karen Foshay}
     - { role: Photography, name: Benjamin Brayfield }
+gallery:
+  - { asset_id: 86483, caption: caption goes here}
+  - { asset_id: 86482, caption: caption goes here}
+  - { asset_id: 86481, caption: caption goes here}
+  - { asset_id: 86480, caption: caption goes here}
+  - { asset_id: 86479, caption: caption goes here}
+  - { asset_id: 86478, caption: caption goes here}
 ---
 
 /! Part 1
@@ -13,7 +20,7 @@ header.chapter.one
   .bound.inner
     h1 1
     h2 Secretive world of surgeon salesmen raises legal, ethical concerns
-    .soundcloud
+    =partial(:soundcloud, :locals => { :soundcloud_id => "150334821", :audio_caption => "Listen to the report from our June 17 broadcast." })
 article.bound
   .prose
 
@@ -29,6 +36,10 @@ article.bound
       The U.S. Department of Health and Human Services' Office of Inspector General has been concerned with physician investments for years, issuing [its first Special Fraud Alert](http://oig.hhs.gov/fraud/docs/alertsandbulletins/2013/POD_Special_Fraud_Alert.pdf) in 1989 (about an earlier version of the POD business model), again in 2006 and most recently in March 2013. In the latest warning, it wrote that PODs are "inherently suspect under the anti-kickback statute."
 
     aside.furnishing
+      figure.asset
+        =partial(:asset, :locals => { :asset_id => "84725" })
+        figcaption
+          p Dr. John Steinmann of Arrowhead Orthopaedics in Redlands is a proponent of physician-owned distributorships. PODs create capitalistic competition in the surgical implant device market and lowers costs to hospitals, he said. His company manufactures and distributes surgical implant devices. He acknowledges that the some doctors abuse the programs to make more money for themselves and calls for standards to increase transparency in the industry.
       // Ad Unit - Position A
       =partial(:ad, :locals => { :ad_id => "x01" })
 
@@ -37,6 +48,14 @@ article.bound
 
       "The fraud alert issued about PODs was very strongly worded, saying that they were very concerned with the use of PODs in the health care industry and the fact that it could ultimately drive up medical costs," said Troy Barksy, an attorney who spent 11 years at Health and Human Services' Office of General Counsel. He added that there is worry PODs may impact patient care. "It could drive unnecessary services, and ultimately lead to patients getting care they don't need," he said.
 
+    aside.pullquote
+      bloackquote
+        p “(PODs) could drive unnecessary services, and ultimately lead to patients getting care they don't need.”
+        footer
+          cite
+            | Troy Barksy, Attorney and former HHS employee
+
+    markdown:
       ### Enforcement action
 
       Without a set of standards or rules, many PODs are operating in a gray zone. But that may change with an ongoing federal law enforcement investigation.
@@ -51,6 +70,13 @@ article.bound
 
       But the Health and Human Services Inspector General found that prices for PODS products were the same as or higher than those of non-POD manufacturers.
 
+    aside.furnishing
+      figure.asset
+        =partial(:asset, :locals => { :asset_id => "84737" })
+        figcaption
+          p Dr. Jose Rodriguez, left, and Dr. Scott Lederhaus perform spine surgery at Foothills Presbyterian Hospital in Glendora. The surgeons are not part of a physician-owned distributorship, but contend that PODs create opportunity for surgeons to perform unnecessary procedures with financial benefits.
+
+    markdown:
       After reviewing its contract with a POD last year, Palomar Health in San Diego cut ties with the distributorship after determining that the health provider would save more than $700,000 by doing so. Palomar also found that the only doctors using the POD devices were investors in the POD or shared a practice with the physician investors. In addition, national hospital chains Tenet and HCA have recently adopted "no POD" policies.
 
       Steinmann said his PODS operate in a transparent manner, although he acknowledges a need within the industry for guidance. "We have worked very hard in three years to gain acceptance on a set of standards that would require transparency and require disclosure and require legal compliance and require personal and financial investment," he said.
@@ -110,7 +136,7 @@ header.chapter.two
   .bound.inner
     h1 2
     h2 Did the lure of money lead to one man's medical nightmare?
-    .soundcloud
+    =partial(:soundcloud, :locals => { :soundcloud_id => "150334821", :audio_caption => "Listen to the report from our June 17 broadcast." })
 article.bound
   .prose
 
@@ -121,19 +147,39 @@ article.bound
     
       In a POD, a physician is an investor and distributor of products that he implants in his surgeries &mdash; a relationship that creates a financial incentive to use those devices.
     
+    aside.pullquote
+      bloackquote
+        p “Oh, God, how did they put this in?”
+        footer
+          cite
+            | Azike Ntephe, Patient
+
+    markdown:
       In his fraud and medical malpractice lawsuit against Pomona surgeon Ali Mesiwala, Ntephe alleges that the surgeon was involved in a POD and had a financial interest in the parts that he implanted into Ntephe.
     
       It all started in 2009. After suffering from ongoing back pain, Ntephe visited three physicians.  The first two suggested minimal procedures, but a third one, Mesiwala, suggested a spinal fusion, according to Ntephe.
-    
+
+    aside.furnishing
+      figure.asset
+        =partial(:asset, :locals => { :asset_id => "84723" })
+        figcaption
+          p After two unnecessary back surgeries, Azike Ntephe now uses a walker to move around his home. He had to give up his law practice and most outdoor activities as begins to walk on his own again.
+
+      // Ad Unit - Position Cm 
+      =partial(:ad, :locals => { :ad_id => "x03" })
+
+    markdown:
       The surgery took place in October of that year. Mesiwala implanted a cage and dozens of nuts, bolts and screws in Ntephe’s spine.
     
       Ntephe said the surgery didn’t work. For months, he could only walk hunched over. Eventually, he could not walk at all and became bedridden.  He claims Mesiwala failed to initially tell him an important detail.
     
       “He didn’t tell me there were dislodged cage and disconnected rods that were causing the intense pain I was having,” Ntephe said. “Instead, he recommended that I have [a] spinal stimulator and that it would help. It did not help. It continued to get worse.”
 
-    .ad
-      // Ad Unit - Position Cm 
-      =partial(:ad, :locals => { :ad_id => "x03" })
+    aside.sidebar
+      header
+        h4 How many spinal surgeries has your doctor performed?
+      .contents
+        p: a.outbound-link href="#" To find out, search this database of medicare data built by CBS.
 
     markdown:
       A second surgeon eventually removed all of the hardware Mesiwala implanted. The metal devices now sit in a plastic bag at Ntephe’s home. Ntephe can now move around again with help of a walker. He wonders if he really needed Mesiwala's complex surgery and all of that hardware.
@@ -148,12 +194,26 @@ article.bound
 
       Ntephe acknowledges that he signed a disclosure form in which Mesiwala said he had a financial interest in three device companies: NuVasive, Kronos Spine and Hoffman Surgical. The form, obtained by KPCC, also said Mesiwala would inform Ntephe if he was going to implant those parts and give him options should he want another product. Ntephe said that conversation never happened.
 
+    aside.furnishing
+      figure.asset
+        =partial(:asset, :locals => { :asset_id => "85776" })
+        figcaption
+          p Azike Ntephe kept the surgical implants that Dr. Ali Mesiwala allegedly used on him improperly. For two years Ntephe lived with more than 40 pieces of unnecessary hardware in his back before having them removed, he said.
+
+    markdown:
       “In my opinion, most PODs operate in a nontransparent manner, and that raises the question of honesty and intent,” said Dr. John Steinmann, owner of [11 distributorships](http://www.alliancesurg.com) in the Inland Empire. “If you are not willing to be transparent, then why not?” he asked.
 
       Steinmann has been urging Congress to establish ethical guidelines for PODs. He claims his distributorships adhere to a published set of rules that are published on his websites, and he’d like others to do the same.
 
       “What we have worked on very hard for three years is to gain acceptance on a set of standards that would require transparency and require disclosure,” Steinmann said.  He’s had meetings with the Health and Human Services Office of Inspector General, laying out his suggested rules governing PODs. The Inspector General issued a critical report on PODs last October, [preceded by a fraud alert in March 2013.](http://oig.hhs.gov/fraud/docs/alertsandbulletins/2013/POD_Special_Fraud_Alert.pdf)
 
+    aside.furnishing
+      figure.asset
+        =partial(:asset, :locals => { :asset_id => "84722" })
+        figcaption
+          p Azike Ntephe kept the surgical implants that Dr. Ali Mesiwala allegedly used on him improperly. For two years Ntephe lived with more than 40 pieces of unnecessary hardware in his back before having them removed.
+
+    markdown:
       While acknowledging PODs are subject to abuse, Steinmann said, “It’s not the POD that’s causing that. It’s an ethical breach. It already exists in that individual. The POD will not take an ethical surgeon and make them unethical.”
 
       ### Letting the ‘Sunshine’ in
@@ -164,12 +224,53 @@ article.bound
 
       Things are going to change later this year.
 
+    aside.sidebar
+      header
+        h4 Court Documents
+      .contents
+        ul.document-list
+          li: a href="docs/doj_investigation.pdf"
+            h5 DOJ's civil investigative demand
+            p.document-meta PDF (12 MB)
+            p.description In this file, you can find the list of 35 doctors named in the lawsuit.
+          li: a href="docs/asike_v_mesiwala.pdf"
+            h5 Azike's lawsuit against Dr. Mesiwala
+            p.document-meta PDF (3 MB)
+          li: a href="docs/hhs_report.pdf"
+            h5 HHS's report on spinal device PODs
+            p.document-meta PDF (335 KB)
+
+    markdown:
       “I think it’s time to put sunshine on some of these approaches,” said U.S. Sen. Orrin Hatch (R-Utah), who pushed for the passage of [the 2014 Sunshine Act.](http://www.cms.gov/Regulations-and-Guidance/Legislation/National-Physician-Payment-Transparency-Program/index.html) Part of the Affordable Care Act, the law requires medical device makers and distributors who get reimbursed by Medicare, Medicaid or the Children’s Health Insurance Program to disclose to the Centers for Medicare and Medicaid Services who their physician investors are and how much they are paid. The Centers for Medicare plan to post that information online by September.
 
       While the government plans to post the information about POD investors, that does not guarantee that doctors will inform their patients.
 
       On a visit to the waiting room of Steinmann's Redlands office, KPCC observed that the doctor has a sign on the counter disclosing his financial ties to PODs. The information is also in his patient consent forms. But Steinmann acknowledged that he does not talk to his patients to make sure they understand that he can financially benefit from the parts he implants in them.
 
+section.gallery.grid
+  .bound
+    .macro
+      header
+        h4 Netephe's Hardware
+        p.instructions Click or tap Netephe's x-rays to see each one in more detail.
+      nav.thumbnails
+        ul
+          - current_page.data.gallery.each do |a|
+            li: a href="#{a.asset_id}"
+              =partial(:asset, :locals => { :asset_id => a.asset_id, :asset_size => "lsquare" })
+    .detail
+      ul
+        - current_page.data.gallery.each do |a|
+          li[id="#{a.asset_id}"]
+            figure
+              =partial(:asset, :locals => { :asset_id => a.asset_id })
+              figcaption
+                p = a.caption
+
+article.bound
+  .prose
+
+    markdown:
       ### A complicated web
 
       An ongoing U.S. Department of Justice civil investigation provides a rare glimpse into the complicated web of distributorships.
