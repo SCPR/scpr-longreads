@@ -22,7 +22,7 @@ header.chapter.one
     h2 Secretive world of surgeon salesmen raises legal, ethical concerns
     =partial(:soundcloud, :locals => { :soundcloud_id => "150334821", :audio_caption => "Listen to the report from our June 17 broadcast." })
 article.bound
-  .prose
+  .prose.cf
 
     markdown:
       If you're a spinal surgery candidate these days, you might want to ask your doctor an additional question: Do you have a financial interest in the device you’re implanting?
@@ -35,7 +35,7 @@ article.bound
 
       The U.S. Department of Health and Human Services' Office of Inspector General has been concerned with physician investments for years, issuing [its first Special Fraud Alert](http://oig.hhs.gov/fraud/docs/alertsandbulletins/2013/POD_Special_Fraud_Alert.pdf) in 1989 (about an earlier version of the POD business model), again in 2006 and most recently in March 2013. In the latest warning, it wrote that PODs are "inherently suspect under the anti-kickback statute."
 
-    aside.furnishing
+    aside.collateral
       figure.asset
         =partial(:asset, :locals => { :asset_id => "84725" })
         figcaption
@@ -49,7 +49,7 @@ article.bound
       "The fraud alert issued about PODs was very strongly worded, saying that they were very concerned with the use of PODs in the health care industry and the fact that it could ultimately drive up medical costs," said Troy Barksy, an attorney who spent 11 years at Health and Human Services' Office of General Counsel. He added that there is worry PODs may impact patient care. "It could drive unnecessary services, and ultimately lead to patients getting care they don't need," he said.
 
     aside.pullquote
-      bloackquote
+      blockquote
         p “(PODs) could drive unnecessary services, and ultimately lead to patients getting care they don't need.”
         footer
           cite
@@ -70,7 +70,7 @@ article.bound
 
       But the Health and Human Services Inspector General found that prices for PODS products were the same as or higher than those of non-POD manufacturers.
 
-    aside.furnishing
+    aside.collateral
       figure.asset
         =partial(:asset, :locals => { :asset_id => "84737" })
         figcaption
@@ -87,6 +87,11 @@ article.bound
 
       The spinal device industry has seen dramatic growth in sales, going from $250 million in 1994 to $7 billion in 2009, according to Stan Mendenhall, editor of [the Orthopedic Network](“www.orthopedicnetworknews.com”) News, an industry newsletter. Much of that growth can be attributed to the huge markups in hardware used.
 
+    aside.collateral
+      // Ad Unit - Position B
+      =partial(:ad, :locals => { :ad_id => "x02" })
+
+    markdown:
       For example, an "average pedicle screw" &mdash; used in spinal surgeries &mdash; costs about $60 to make, while the average selling price "is over $1,000," Mendenhall said.
 
       KPCC obtained [a PowerPoint presentation by Orange County-based Atlas Medical LLC](http://www.scribd.com/doc/229048410/Atlas-PowerPoint), which described itself as a consulting company that provided "Turn key [sic] POD set up" to doctors. The PowerPoint lists device markups, including a screw that costs $310 and sells for $1,100. Atlas Medical owner Aaron Jennings said the firm is no longer in business.
@@ -103,12 +108,23 @@ article.bound
 
       "Unfortunately my suspicions of physicians using PODs were confirmed," Hatch told KPCC, adding, "the report showed that PODs can lead to over-utilizations [and] force unnecessary procedures for patients who really might not need that."
 
-      The report's findings were based on questionnaires submitted to 596 hospitals, 589 of which responded. Investigators also looked at Medicare claims for spinals surgeries, and found the following:
-
-    // Ad Unit - Position B
-    =partial(:ad, :locals => { :ad_id => "x02" })
+    aside.collateral.info
+      header
+        h4 PODs 101
+      .contents
+        dl.faq
+          dt What is a POD?
+          dd A POD is a Physician Owned Distributorship. Under this business model, a doctor is an investor in, and distributor of, the devices or hardware he may put into his patients. Multiple doctors can have a financial interest in one POD.
+          dt Is that business arrangement legal?
+          dd In and of itself the arrangement is legal, but the Department of Health and Human Services’ Office of Inspector General has concluded that PODs are “inherently suspect under the anti-kickback statute.” It issued fraud alerts about PODs in 2006 and in 2013.
+          dt Can I find out if my surgeon is involved in a POD?
+          dd Currently, your physician is under no legal obligation to disclose that information. The Sunshine Act, a provision of the Affordable Care Act, does require that each year, certain medical device makers and distributors disclose to the Centers for Medicare and Medicaid Services ownership or investment interests held by physicians or their immediate family members. The law requires the Centers to post online the first batch of information it received by September.
+          dt Does the ‘Sunshine Act’ require my doctor to inform me that he is involved in a POD?
+          dd No. You will have to ask on your own,  or search that Centers for Medicare and Medicaid Services website when it is published. The Centers say the site “will be organized and designed to increase access to and knowledge about these relationships and to provide information to enable consumers to make informed decisions.”
 
     markdown:
+      The report's findings were based on questionnaires submitted to 596 hospitals, 589 of which responded. Investigators also looked at Medicare claims for spinals surgeries, and found the following:
+
       * One in five spinal fusion surgeries billed to Medicare in 2012 used POD devices.
       * Spinal fusions doubled at hospitals that used PODS compared with those that did not.
       * Spinal surgeries tripled after hospitals began purchasing from a POD.
@@ -116,19 +132,6 @@ article.bound
 
       For Dr. Scott Lederhaus, president of the Association of Medical Ethics and a longtime critic of PODs, the Justice Department investigation needs to send a message. "Somebody needs to go to jail because a just a fine isn't going to do it." Lederhaus said, adding, "the fines are a lot less than what they would make in a year, so why bother worrying about what you'll get fined."
 
-  aside.sidebar
-    header
-      h4 PODs 101
-    .contents
-      dl.faq
-        dt What is a POD?
-        dd A POD is a Physician Owned Distributorship. Under this business model, a doctor is an investor in, and distributor of, the devices or hardware he may put into his patients. Multiple doctors can have a financial interest in one POD.
-        dt Is that business arrangement legal?
-        dd In and of itself the arrangement is legal, but the Department of Health and Human Services’ Office of Inspector General has concluded that PODs are “inherently suspect under the anti-kickback statute.” It issued fraud alerts about PODs in 2006 and in 2013.
-        dt Can I find out if my surgeon is involved in a POD?
-        dd Currently, your physician is under no legal obligation to disclose that information. The Sunshine Act, a provision of the Affordable Care Act, does require that each year, certain medical device makers and distributors disclose to the Centers for Medicare and Medicaid Services ownership or investment interests held by physicians or their immediate family members. The law requires the Centers to post online the first batch of information it received by September.
-        dt Does the ‘Sunshine Act’ require my doctor to inform me that he is involved in a POD?
-        dd No. You will have to ask on your own,  or search that Centers for Medicare and Medicaid Services website when it is published. The Centers say the site “will be organized and designed to increase access to and knowledge about these relationships and to provide information to enable consumers to make informed decisions.”
 
 
 /! Part 2
@@ -148,7 +151,7 @@ article.bound
       In a POD, a physician is an investor and distributor of products that he implants in his surgeries &mdash; a relationship that creates a financial incentive to use those devices.
     
     aside.pullquote
-      bloackquote
+      blockquote
         p “Oh, God, how did they put this in?”
         footer
           cite
@@ -159,7 +162,7 @@ article.bound
     
       It all started in 2009. After suffering from ongoing back pain, Ntephe visited three physicians.  The first two suggested minimal procedures, but a third one, Mesiwala, suggested a spinal fusion, according to Ntephe.
 
-    aside.furnishing
+    aside.collateral
       figure.asset
         =partial(:asset, :locals => { :asset_id => "84723" })
         figcaption
@@ -175,7 +178,7 @@ article.bound
     
       “He didn’t tell me there were dislodged cage and disconnected rods that were causing the intense pain I was having,” Ntephe said. “Instead, he recommended that I have [a] spinal stimulator and that it would help. It did not help. It continued to get worse.”
 
-    aside.sidebar
+    aside.collateral.info.outbound
       header
         h4 How many spinal surgeries has your doctor performed?
       .contents
@@ -194,7 +197,7 @@ article.bound
 
       Ntephe acknowledges that he signed a disclosure form in which Mesiwala said he had a financial interest in three device companies: NuVasive, Kronos Spine and Hoffman Surgical. The form, obtained by KPCC, also said Mesiwala would inform Ntephe if he was going to implant those parts and give him options should he want another product. Ntephe said that conversation never happened.
 
-    aside.furnishing
+    aside.collateral
       figure.asset
         =partial(:asset, :locals => { :asset_id => "85776" })
         figcaption
@@ -207,7 +210,7 @@ article.bound
 
       “What we have worked on very hard for three years is to gain acceptance on a set of standards that would require transparency and require disclosure,” Steinmann said.  He’s had meetings with the Health and Human Services Office of Inspector General, laying out his suggested rules governing PODs. The Inspector General issued a critical report on PODs last October, [preceded by a fraud alert in March 2013.](http://oig.hhs.gov/fraud/docs/alertsandbulletins/2013/POD_Special_Fraud_Alert.pdf)
 
-    aside.furnishing
+    aside.collateral
       figure.asset
         =partial(:asset, :locals => { :asset_id => "84722" })
         figcaption
@@ -224,21 +227,24 @@ article.bound
 
       Things are going to change later this year.
 
-    aside.sidebar
+    aside.collateral.info.outbound.library
       header
         h4 Court Documents
       .contents
         ul.document-list
           li: a href="docs/doj_investigation.pdf"
-            h5 DOJ's civil investigative demand
-            p.document-meta PDF (12 MB)
-            p.description In this file, you can find the list of 35 doctors named in the lawsuit.
+            mark DOJ's civil investigative demand
+            ul
+              li PDF (12 MB)
+              li In this file, you can find the list of 35 doctors named in the lawsuit.
           li: a href="docs/asike_v_mesiwala.pdf"
-            h5 Azike's lawsuit against Dr. Mesiwala
-            p.document-meta PDF (3 MB)
+            mark Azike's lawsuit against Dr. Mesiwala
+            ul
+              li PDF (3 MB)
           li: a href="docs/hhs_report.pdf"
-            h5 HHS's report on spinal device PODs
-            p.document-meta PDF (335 KB)
+            mark HHS's report on spinal device PODs
+            ul
+              li PDF (335 KB)
 
     markdown:
       “I think it’s time to put sunshine on some of these approaches,” said U.S. Sen. Orrin Hatch (R-Utah), who pushed for the passage of [the 2014 Sunshine Act.](http://www.cms.gov/Regulations-and-Guidance/Legislation/National-Physician-Payment-Transparency-Program/index.html) Part of the Affordable Care Act, the law requires medical device makers and distributors who get reimbursed by Medicare, Medicaid or the Children’s Health Insurance Program to disclose to the Centers for Medicare and Medicaid Services who their physician investors are and how much they are paid. The Centers for Medicare plan to post that information online by September.
@@ -247,7 +253,8 @@ article.bound
 
       On a visit to the waiting room of Steinmann's Redlands office, KPCC observed that the doctor has a sign on the counter disclosing his financial ties to PODs. The information is also in his patient consent forms. But Steinmann acknowledged that he does not talk to his patients to make sure they understand that he can financially benefit from the parts he implants in them.
 
-section.gallery.grid
+
+/section.gallery.grid
   .bound
     .macro
       header
@@ -266,6 +273,7 @@ section.gallery.grid
               =partial(:asset, :locals => { :asset_id => a.asset_id })
               figcaption
                 p = a.caption
+
 
 article.bound
   .prose
@@ -286,3 +294,6 @@ article.bound
       Sabit has repeatedly denied being involved in a POD. [The California Medical Board is now trying to revoke or suspend his license.](http://www.freep.com/assets/freep/pdf/C4212302923.PDF)
 
       Mesiwala and his attorney did not show up for a scheduled deposition on May 30, according to Ntephe’s attorney, Scott Glovsky. Glovsky is now seeking a court order to force Mesiwala to answer his questions, including his relationship with Reliance and any PODs. 
+
+    aside.supplemental
+      p Francine Rios contributed to this story.

@@ -20,8 +20,64 @@ body {
 PROSE DEFAULTS
 ================================================================ */
 .prose {
+    margin-bottom: 70px;
     em      { font-style: normal; font-family: $font-merri-ital; }
     strong  { font-weight: normal; font-family: $font-merri-bold; }
+    & > p,
+    & > ul,
+    & > ol,
+    & > dl,
+    & > table,
+    & > h3,
+    & > .supplemental {
+        font-size: 1.0625em;
+        line-height: 1.425;
+        color: black;
+        width: $c6;
+        margin: 0 auto 1.365em;
+        &.supplemental {
+            margin-top: 50px;
+            border-top: 1px solid #e1e1e1;
+            font-size: 0.9375em; // 15 / 16
+            color: #a6a6a6;
+            font-family: $font-freight;
+            padding-top: 0.5em;
+            font-style: italic;        
+        }
+//  -------------------------------------------------------------------------------------------------
+	@media screen and (max-width: 1300px) {
+        width: $c8;
+	    }
+//  -------------------------------------------------------------------------------------------------    
+    @media screen and (max-width: 690px) {
+        font-size: 0.875em;
+        width: $c10;
+        }
+//  -------------------------------------------------------------------------------------------------    
+    @media screen and (max-width: 450px) {
+        width: auto;
+        }
+//  -------------------------------------------------------------------------------------------------
+    }
+    & > ul {
+        li {
+            background: url(i/ephemera-bullet-red.png) no-repeat 0 0.43em;
+            background-size: 8px 8px;
+            padding: 0 0 0 20px;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+    }
+    & > h3 {
+        font-size: 1.375em; // 22 / 16
+        line-height: 1.1;
+        margin-top: 2em;
+        color: #a22626;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $font-prox;
+        font-weight: 900;
+    }
 }
 
 
@@ -33,19 +89,223 @@ CHAPTER HEADERS
 ================================================================ */
 .chapter {
     color: white;
-    background: #7a2323;
-    padding: 140px 0 57px;
+    background: url(i/ephemera-tinted-xray.jpg) no-repeat center top;
+    background-size: 100% auto;
+    background-color: #7a2323;
+    padding: 192px 0 51px;
     margin-bottom: 80px;
+    h1 {
+        font-family: $font-courier;
+        font-size: 1.875em;
+        text-align: center;
+        width: 56px;
+        height: 41px; // 56
+        padding-top: 15px;
+        margin-bottom: 30px;
+        background: rgba(0,0,0,0.65);
+        line-height: 1;
+    }
+    h2 {
+        font-family: $font-prox;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 3.3125em;
+        line-height: 0.95;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+        padding-bottom: 33px;
+        margin-bottom: 40px;
+    }
+    .audio {
+        padding: 0;
+        position: relative;
+        min-height: 164px;
+        .soundcloud {
+            width: $c4;
+            min-width: 412px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        figcaption {
+            font-family: $font-merri-ital;
+            font-size: 0.875em;
+            position: relative;
+            padding-top: 120px;
+            margin-right: 444px;
+            text-align: right;
+            span    { display: block; }
+        }
+    }
+//  -------------------------------------------------------------------------------------------------    
+    @media screen and (max-width: 2130px) {
+        background-size: auto 100%;
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 700px) {
+        h2              { font-size: 2.5em; }
+        .audio {
+            .soundcloud { position: static; margin: 0 auto 20px; }
+            figcaption  { text-align: center; margin: 0; padding: 0; }
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 500px) {
+        .audio {
+            .soundcloud { width: 100% !important; min-width: 0; }
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
 }
+
+
+
+
+
+
+
+
 
 /*
 ================================================================
-SIDEBARS
+COLLATERAL & PULLQUOTE
 ================================================================ */
-.sidebar {
-    background: $lightGray;
-    header {
-        background: #8e1616;
-        color: $white;
+.collateral,
+.pullquote {
+    width: $c5;
+    float: right;
+    margin: 0 0 2em 2.461538461538%; // 32 / 1300
+    padding-top: 5px;
+    &.pullquote {
+        float: left;
+        margin: 0;
+        width: $c3;
+        overflow: hidden;
+        border-top: 1px solid #a22626;
+        padding-top: 16px;
+        blockquote {
+            padding-right: 10%;
+            p           { font-family: $font-freight; font-weight: 300; font-style: italic; font-size: 2.35294117647059em; line-height: 1.23; }
+            footer      { font-family: $font-prox; color: #a22626; text-transform: uppercase; font-size: 0.64705882352941em; line-height: 1.15; padding-top: 40px; }
+        }
     }
+    .asset {
+        .image          { width: 100%; margin-bottom: 15px; }
+        img             { max-width: 100%; height: auto; }
+        figcaption      { color: #919191; font-size: 0.8125em; font-family: $font-freight; font-style: italic; line-height: 1.1; text-align: right; }
+        & ~ .ad         { margin-top: 40px; }
+    }
+    .ad {
+        text-align: center;
+        border-top: 1px solid #cfcece;
+        border-bottom: 1px solid #cfcece;
+        padding: 36px 0;
+        .intent         { display: block; width: 100%; margin-bottom: 5px; }
+        img             { max-width: 100%; height: auto; margin: 0 auto; }
+        .appeal         { color: #9c9c99; font-family: $font-freight; font-size: 0.6875em; }
+        .appeal a:hover { text-decoration: underline; color: #424242; }
+    }
+    &.info {
+        background: #e8e8e8;
+        padding: 0;
+        header {
+            background: #8e1616;
+            color: white;
+            text-transform: uppercase;
+            font-family: $font-prox;
+            font-weight: 900;
+            font-size: 1.5em; // 24 / 16
+            padding: 21px 4.206500956023% 14px;
+            line-height: 1;
+        }
+        .contents {
+            padding: 24px 4.206500956023% 35px;
+            font-family: $font-freight;
+            font-size: 0.875em; // 14 / 16
+            line-height: 1.3;
+            a               { color: #660000; box-shadow: inset 0 -3px 0 #e8e8e8, inset 0 -4px 0 #c7aeae; }
+            a:hover         { color: black; box-shadow: inset 0 -3px 0 #e8e8e8, inset 0 -4px 0 black; }
+        }
+        .faq {
+            dt              { font-weight: bold; color: #8e1616; line-height: 1.25; margin-bottom: 1.2em; }
+            dd              { margin-bottom: 1.55em; }
+            dd:last-child   { margin-bottom: 0; }
+        }
+        &.outbound {
+            float: left;
+            margin: 0;
+            width: $c3;
+            header          { font-size: 0.9375em; }
+            .contents       { padding: 14px 60px 20px 4.206500956023%; background: url(i/ephemera-outbound-arrow.png) no-repeat right 4.206500956023% bottom 20px; background-size: 21px 19px; }
+        }
+        &.library {
+            .contents       { background: none; padding: 4px 8% 20px 8%; }
+        }
+        .document-list {
+            & > li,a            { display: block; }
+            & > li              { border-bottom: 1px solid #c2c2c2; }
+            & > li:last-child   { border-bottom: none; }
+            a,a:hover           { box-shadow: none; }
+            a                   { padding: 16px 0 11px 42px; background: url(i/ephemera-icon-document.png) no-repeat 0 21px; background-size: 24px 29px; line-height: 1.2; }
+            mark                { display: block; color: #811313; font-weight: 700; margin-bottom: 4px; }
+            a:hover mark        { text-decoration: underline; }
+            ul li               { color: black; margin-bottom: 7px; font-style: italic; }
+            ul li:first-child   { font-style: normal; }
+            a:hover ul li       { color: #811313; }
+        }
+    }
+    
+//  -------------------------------------------------------------------------------------------------    
+    @media screen and (max-width: 1300px) {
+        &.pullquote {
+            width: $c2;
+            blockquote {
+                p           { font-size: 1.15em; }
+                footer      { padding-top: 1.7em; }
+            }
+        }
+        &.info.outbound {
+            width: $c2;
+            header          { font-size: 0.8125em; }
+            .contents       { padding: 14px 4.206500956023% 30px 4.206500956023%; background-position: right 4.206500956023% bottom 10px; }
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 1230px) {
+        &.info.outbound.library {
+            float: none;
+            width: auto;
+            max-width: $c8;
+            margin: 40px auto 45px !important;
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 690px) {
+        &.info.outbound.library {
+            max-width: $c10;
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 800px) {
+        width: auto !important;
+        float: none !important;
+        margin: 3em 0 !important;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        padding: 2em 0 1.5em;
+        &.pullquote {
+            blockquote  { max-width: $c8; margin: 0 auto; padding-right: 0; }
+        }
+        .asset {
+            figcaption  { text-align: center; }
+        }
+        .ad {
+            border-bottom: none;
+            padding-bottom: 1em;
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
 }
+
+
+
+

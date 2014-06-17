@@ -3,20 +3,23 @@
 TITLING
 ================================================================ */
 .titling {
+
     background: black;
     color: white;
     font-family: $font-prox;
-    padding: 28px 0 290px;
-    .inner              { position: relative; padding: 232px 0 0; outline: 1px solid aqua; }
 
-    h1                  { font-size: 4.375em; text-transform: uppercase; font-weight: 900; line-height: 0.85; }
-    h2                  { font-family: $font-freight; font-size: 1.5em; line-height: 1; font-weight: 300; margin-bottom: 90px; }
-
+    .inner {
+        position: relative;
+        padding: 260px 0 290px;
+        background: url(i/scenery-surgeons.jpg) no-repeat right bottom;
+        background-size: auto 100%;
+    }
+    h1                      { font-size: 4.375em; text-transform: uppercase; font-weight: 900; line-height: 0.85; margin-bottom: 7px; }
+    h2                      { font-family: $font-freight; font-size: 1.5em; line-height: 1; font-weight: 300; margin-bottom: 83px; color: rgba(255,255,255,0.65); }
     .credits {
         dl {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             position: relative;
-            outline: 1px solid orange;
             padding-left: 111px;
             dt              { display: block; position: absolute; top: 0.35em; left: 0; text-transform: uppercase; font-size: 0.75em; }
             dd              { font-family: $font-freight; font-size: 0.875em; color: #aeaeae; }
@@ -25,52 +28,108 @@ TITLING
         }
     }
 
-    .station,.share,h3  { position: absolute; outline: 1px solid aqua; }
+    .station,.share,h3      { position: absolute; }
+
     h3 {
-        top: 0;
+        @include texthide;
+        top: 28px;
         left: 0;
         width: 111px;
         height: 16px;
-        background: green;
+        background: url(i/logo-kpcc-against-black.png) no-repeat;
+        background-size: 100% auto;
     }
+
     .share {
         right: 0;
-        bottom: 0;
+        bottom: 290px;
         li {
             display: inline;
             a {
                 @include texthide;
-                background-color: green;
+                background: url(i/ephemera-icon-shares.png) no-repeat;
+                background-size: 102px 30px;
                 width: 30px;
                 height: 30px;
                 float: left;
                 margin-right: 10px;
             }
+            &:nth-child(1) a    { background-position: 0 0; }       // twitter
+            &:nth-child(2) a    { background-position: -36px 0; }   // facebook
             &:last-child a      { margin-right: 0; }
         }
     }
+
+
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 800px) {
+        .inner              { padding: 150px 0; background-size: 350px auto; }
+        h1                  { font-size: 3.5em; }
+        h2                  { font-size: 1.25em; margin-bottom: 200px; }
+        .share              { bottom: 150px; }
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 440px) {
+        .inner              { padding: 100px 0 370px; background-size: 300px auto; }
+        h1                  { font-size: 3.0em; text-align: center; margin-bottom: 15px; }
+        h2                  { font-size: 1em; text-align: center; margin-bottom: 30px; }
+        .credits            { min-width: 260px; width: $c8; margin: 0 auto; }
+        .credits dd         { text-align: right; }
+        .share              { bottom: 40px; }
+    }
+//  -------------------------------------------------------------------------------------------------
+
+
+
     .station {
         right: 0;
-        top: 0;
+        top: 28px;
         text-transform: uppercase;
         color: #727272;
         font-size: 0.875em; // 14 / 16
         & > ul > li {
-            display: inline;
+            display: inline-block;
             position: relative;
-            outline: 1px solid yellow;
+            margin-right: 25px;
             mark {
                 display: inline-block;
-                background: yellow;
-                margin-right: 20px;
+            }
+            & > ul {
+                position: absolute;
+                font-size: 0.8125em;
+                padding: 7px 20px 7px 10px;
+                left: -10px;
+                background: black;
+                display: none;
+                li:first-child,
+                li:last-child   { display: none; }
+                li              { display: block; margin-bottom: 5px; }
+            }
+            &:nth-child(2) {
+                background: url(i/ephemera-triangle-downward.png) no-repeat right 6px;
+                background-size: 8px 5px;
+                padding-right: 14px;
+                mark            { cursor: default; }
+                &:hover ul      { display: block; }
             }
             &:last-child mark {
                 margin-right: 0;
             }
-            & > ul {
-                position: absolute;
-                background: purple;
+            a:hover             { color: white; text-decoration: underline; }
+        }
+    //  -------------------------------------------------------------------------------------------------
+        @media screen and (max-width: 560px) {
+            & > ul > li:first-child,
+            & > ul > li:last-child  { display: none; }
+            & > ul > li > ul {
+                li:first-child,
+                li:last-child       { display: block; }
             }
         }
+    //  -------------------------------------------------------------------------------------------------
     }
+
+
+
+
 }

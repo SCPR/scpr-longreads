@@ -1,0 +1,52 @@
+
+
+/*
+================================================================
+FOOTER
+================================================================ */
+.epilogue {
+    background: black;
+    color: white;
+    padding: 55px 0 100px;
+    font-family: $font-freight;
+    .inner      { position: relative; }
+    h1 {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 101px;
+        height: 14px;
+        a {
+            @include texthide;
+            background: url(i/logo-kpcc-against-black.png) no-repeat;
+            background-size: 100% auto;
+            overflow: hidden;
+        }
+    }
+    .fineprint {
+        text-align: right;
+        font-size: 0.875em;
+        ul {
+            margin-bottom: 10px;
+            li              { display: inline; padding-right: 10px; }
+            li:last-child   { padding-right: 0; }
+            a:hover         { text-decoration: underline; }
+        }
+        p                   { color: #808080; }
+    }
+
+
+
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 410px) {
+        padding: 40px 0 60px;
+        h1                  { position: static; margin: 0 auto 30px; }
+        .fineprint {
+            text-align: center;
+        }
+    }
+//  -------------------------------------------------------------------------------------------------
+
+
+}
+
