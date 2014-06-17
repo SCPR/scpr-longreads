@@ -35,6 +35,8 @@ PROSE DEFAULTS
         color: black;
         width: $c6;
         margin: 0 auto 1.365em;
+        a       { color: #0196cd; box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 #87ddfc; }
+        a:hover { color: #a22626; box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 #eb9393; }
         &.supplemental {
             margin-top: 50px;
             border-top: 1px solid #e1e1e1;
@@ -221,9 +223,9 @@ COLLATERAL & PULLQUOTE
             padding: 24px 4.206500956023% 35px;
             font-family: $font-freight;
             font-size: 0.875em; // 14 / 16
-            line-height: 1.3;
-            a               { color: #660000; box-shadow: inset 0 -3px 0 #e8e8e8, inset 0 -4px 0 #c7aeae; }
-            a:hover         { color: black; box-shadow: inset 0 -3px 0 #e8e8e8, inset 0 -4px 0 black; }
+            line-height: 1.35;
+            a               { color: #660000; box-shadow: inset 0 -2px 0 #e8e8e8, inset 0 -3px 0 #c7aeae; }
+            a:hover         { color: black; box-shadow: inset 0 -2px 0 #e8e8e8, inset 0 -3px 0 black; }
         }
         .faq {
             dt              { font-weight: bold; color: #8e1616; line-height: 1.25; margin-bottom: 1.2em; }
@@ -279,16 +281,11 @@ COLLATERAL & PULLQUOTE
         }
     }
 //  -------------------------------------------------------------------------------------------------
-    @media screen and (max-width: 690px) {
-        &.info.outbound.library {
-            max-width: $c10;
-        }
-    }
-//  -------------------------------------------------------------------------------------------------
     @media screen and (max-width: 800px) {
         width: auto !important;
+        max-width: $c8;
         float: none !important;
-        margin: 3em 0 !important;
+        margin: 3em auto !important;
         border-top: 1px solid #c4c4c4;
         border-bottom: 1px solid #c4c4c4;
         padding: 2em 0 1.5em;
@@ -304,6 +301,15 @@ COLLATERAL & PULLQUOTE
         }
     }
 //  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 690px) {
+        max-width: $c10 !important;
+    }
+//  -------------------------------------------------------------------------------------------------
+    @media screen and (max-width: 450px) {
+        max-width: 100% !important;
+    }
+//  -------------------------------------------------------------------------------------------------
+
 }
 
 
