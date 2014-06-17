@@ -9,7 +9,7 @@ Standard, evergreen, shows-up-right-before-the-footer membership appeal.
 ################################################################################################ */
 
 .membership {
-    background: #2ea2cc image-url("../images/global/backdrop-bluecity.jpg") no-repeat center top;
+    background: #2ea2cc url("../images/global/backdrop-bluecity.jpg") no-repeat center top;
     background-size: auto 100%;
     color: white;
     box-shadow: 0 -8px 0 rgba(0,0,0,0.13);
@@ -37,7 +37,7 @@ Standard, evergreen, shows-up-right-before-the-footer membership appeal.
             height: 23px;
             a {
                 @include mask;
-                background: image-url("../images/global/logo-kpcc-white.png") no-repeat;
+                background: url("../images/global/logo-kpcc-white.png") no-repeat;
                 background-size: 100%;
             }
         }
