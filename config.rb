@@ -46,11 +46,17 @@ activate :livereload
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def page_title(subtitle = nil, separator = ' | ')
+    if current_page.data.subtitle
+      @full_title = current_page.data.title + ": " + current_page.data.subtitle
+    else
+      @full_title = current_page.data.title
+    end
+    
+    [@full_title, "89.3 KPCC"].compact.join(separator)
+  end
+end
 
 # Set slim-lang output style
 Slim::Engine.set_default_options :pretty => true
