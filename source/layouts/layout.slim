@@ -50,8 +50,8 @@ html lang="en"
 
         aside.share
           ul.cf
-            li: a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads%2F{{basename}}&amp;via=kpcc"  Share via Twitter
-            li: a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads%2F{{basename}}"  Share via Facebook
+            li: a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads#{current_page.url}&amp;via=kpcc"  Share via Twitter
+            li: a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fprojects.scpr.org%2Fstatic%2Flongreads#{current_page.url}"  Share via Facebook
 
     // The body of the page
     == yield
@@ -74,3 +74,53 @@ html lang="en"
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
+
+    /! Stats: WebTrends
+    script src="http://media.scpr.org/assets/scripts/webtrends.v2.js"
+    javascript:
+      //<![CDATA[
+          var _tag=new WebTrends();
+          _tag.dcsGetId();
+      //]]>
+    javascript:
+      //<![CDATA[
+          _tag.dcsCustom=function(){
+              // Add custom parameters here.
+              //_tag.DCSext.param_name=param_value;
+          }
+      _tag.dcsCollect();
+      //]]>
+    noscript
+      div
+        img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://statse.webtrendslive.com/dcsyqctzwuz5bdsebpmwhwe8w_2p8d/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.3.0&amp;WT.dcssip=www.scpr.org"
+    /! /WebTrends
+
+    /! BEGIN Comscore
+    javascript:
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: "2", c2: "6035974", c3: "", c4: "" });
+      (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+      })();
+    noscript
+      img src="http://b.scorecardresearch.com/p?c1=2&c2=6035974&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1"
+    /! /Comscore
+
+    /! begin chartbeat
+    javascript:
+      var _sf_async_config = { uid: 33583, domain: 'projects.scpr.org', useCanonical:true };
+      (function() {
+          function loadChartbeat() {
+              window._sf_endpt = (new Date()).getTime();
+              var e = document.createElement('script');
+              e.setAttribute('language', 'javascript');
+              e.setAttribute('type', 'text/javascript');
+              e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+              document.body.appendChild(e);
+          };
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+    /! end chartbeat
