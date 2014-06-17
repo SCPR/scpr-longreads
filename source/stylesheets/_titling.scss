@@ -91,9 +91,7 @@ TITLING
             display: inline-block;
             position: relative;
             margin-right: 25px;
-            mark {
-                display: inline-block;
-            }
+            mark                { display: inline-block; }
             & > ul {
                 position: absolute;
                 font-size: 0.8125em;
@@ -112,9 +110,7 @@ TITLING
                 mark            { cursor: default; }
                 &:hover ul      { display: block; }
             }
-            &:last-child mark {
-                margin-right: 0;
-            }
+            &:last-child        { margin-right: 0; }
             a:hover             { color: white; text-decoration: underline; }
         }
     //  -------------------------------------------------------------------------------------------------
