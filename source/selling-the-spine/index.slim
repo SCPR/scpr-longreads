@@ -182,7 +182,7 @@ article.bound
       header
         h4 How many spinal surgeries has your doctor performed?
       .contents
-        p: a.outbound-link href="#" To find out, search this database of medicare data built by CBS.
+        p: a.outbound-link href="http://www.cbsnews.com/news/tapping-into-controversial-back-surgeries/2/" To find out, search this database of medicare data built by CBS.
 
     markdown:
       A second surgeon eventually removed all of the hardware Mesiwala implanted. The metal devices now sit in a plastic bag at Ntephe’s home. Ntephe can now move around again with help of a walker. He wonders if he really needed Mesiwala's complex surgery and all of that hardware.
@@ -236,9 +236,9 @@ article.bound
             mark DOJ's civil investigative demand
             ul
               li PDF (12 MB)
-              li In this file, you can find the list of 35 doctors named in the lawsuit.
-          li: a href="docs/asike_v_mesiwala.pdf"
-            mark Azike's lawsuit against Dr. Mesiwala
+              li You can find the list of 35 doctors named in the investigation on page 32.
+          li: a href="docs/azike_v_mesiwala.pdf"
+            mark Ntephe's lawsuit against Dr. Mesiwala
             ul
               li PDF (3 MB)
           li: a href="docs/hhs_report.pdf"
@@ -297,3 +297,9 @@ article.bound
 
     aside.supplemental
       p Francine Rios contributed to this story.
+
+
+- content_for(:document_footer) do
+
+	==javascript_include_tag 'cosmetics'
+
