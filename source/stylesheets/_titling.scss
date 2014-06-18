@@ -105,12 +105,12 @@ TITLING
             }
             &:nth-child(2) {
                 background: url(i/ephemera-triangle-downward.png) no-repeat right 6px;
-                background-size: 8px 5px;
+                background-size: 8px 50px;
                 padding-right: 14px;
-                mark            { cursor: default; }
+                &:hover         { background-position: right -39px; }
             }
             &:last-child        { margin-right: 0; }
-            a:hover             { color: white; text-decoration: underline; }
+            mark:hover          { color: white; text-decoration: underline; cursor: pointer; }
         }
     //  -------------------------------------------------------------------------------------------------
         @media screen and (max-width: 560px) {

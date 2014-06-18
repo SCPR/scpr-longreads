@@ -16,22 +16,24 @@ jQuery(document).ready(function($) {
             //	================================================
             //	"Inside KPCC" dropdown reveal
             //	------------------------------------------------
-            if(is_touch_device() == true) {
+            $(".titling .station > ul > li:nth-child(2)").click(function(){
+                $(this).find("ul").toggle();
+            });
 
-                    $(".titling .station > ul > li:nth-child(2)").click(function(){
-                        $(this).find("ul").toggle;
-                    });
 
-            } else {
 
-                    $(".titling .station > ul > li:nth-child(2)").mouseover(function(){
-                        $(this).find("ul").show();
-                    }).mouseout(function(){
-                        $(this).find("ul").hide();
-                    });
-                    
-            }
 
+
+            //	================================================
+            //	Gallery
+            //	------------------------------------------------
+            $(".gallery .picker a").click(function(){
+                var desiredSlide = $(this).closest("li").index() + 1;
+                //alert(desiredSlide);
+                $(".gallery .showcase li").hide();
+                $(".gallery .showcase li:nth-child(" + desiredSlide + ")").show();
+                return false;
+            });
 
 
 

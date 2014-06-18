@@ -7,12 +7,12 @@ credits:
     - { role: Reporting, name: Karen Foshay}
     - { role: Photography, name: Benjamin Brayfield }
 gallery:
-  - { asset_id: 86483, caption: caption goes here}
-  - { asset_id: 86482, caption: caption goes here}
-  - { asset_id: 86481, caption: caption goes here}
-  - { asset_id: 86480, caption: caption goes here}
-  - { asset_id: 86479, caption: caption goes here}
-  - { asset_id: 86478, caption: caption goes here}
+  - { asset_id: 86483, caption: "Lower Back (Side): A side view of Ntephe's lower back shows the pedicle screws and rod alongside his spine. At the rod's bottom, the there appears to be a disconnection of the screw to the rod. Ntephe contends in this lawsuit hardware dislodged." }
+  - { asset_id: 86482, caption: "Lower Back: A front-to-back image shows the implanted screws and rods."}
+  - { asset_id: 86481, caption: "Neck (Side): A side-view image of Ntephe's neck reveals the plate over the front part of the bone."}
+  - { asset_id: 86480, caption: "Neck: A front-to-back view of the fusion plate in Ntephe's neck."}
+  - { asset_id: 86479, caption: "Upper Back (Side): A side view of the upper-end of the fusion, continuing along the thoracic spine from the lower back."}
+  - { asset_id: 86478, caption: "Upper Back: A front-to-back view shows the screws and rods in the thoracic spine."}
 ---
 
 /! Part 1
@@ -141,7 +141,7 @@ header.chapter.two
     h2 Did the lure of money lead to one man's medical nightmare?
     =partial(:soundcloud, :locals => { :soundcloud_id => "154671121", :audio_caption => "Listen to the report from our June 17 broadcast." })
 article.bound
-  .prose
+  .prose.cf
 
     markdown:
       Scattered on Azike Ntephe’s kitchen table are dozens of rods, screws and bolts that just two years ago used to hold up his spine. “Oh, God, how did they put this in?” said the Claremont resident.
@@ -254,22 +254,22 @@ article.bound
       On a visit to the waiting room of Steinmann's Redlands office, KPCC observed that the doctor has a sign on the counter disclosing his financial ties to PODs. The information is also in his patient consent forms. But Steinmann acknowledged that he does not talk to his patients to make sure they understand that he can financially benefit from the parts he implants in them.
 
 
-/section.gallery.grid
-  .bound
-    .macro
+section.gallery.grid
+  .inner.bound.cf
+    .picker.cf
       header
         h4 Netephe's Hardware
         p.instructions Click or tap Netephe's x-rays to see each one in more detail.
       nav.thumbnails
-        ul
+        ul.cf
           - current_page.data.gallery.each do |a|
             li: a href="#{a.asset_id}"
               =partial(:asset, :locals => { :asset_id => a.asset_id, :asset_size => "lsquare" })
-    .detail
+    .showcase
       ul
         - current_page.data.gallery.each do |a|
           li[id="#{a.asset_id}"]
-            figure
+            figure.cf
               =partial(:asset, :locals => { :asset_id => a.asset_id })
               figcaption
                 p = a.caption
