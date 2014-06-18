@@ -1,6 +1,7 @@
 require "slim"
 activate :bourbon
 activate :directory_indexes
+activate :relative_assets
 activate :livereload
 
 ###
