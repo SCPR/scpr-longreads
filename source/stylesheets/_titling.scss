@@ -102,6 +102,7 @@ TITLING
                 li:first-child,
                 li:last-child   { display: none; }
                 li              { display: block; margin-bottom: 5px; }
+                a:hover         { text-decoration: underline; }
             }
             &:nth-child(2) {
                 background: url(i/ephemera-triangle-downward.png) no-repeat right 6px;
