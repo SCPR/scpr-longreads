@@ -14,7 +14,7 @@ Once you're done building and your site is ready to deploy, you'll want to run t
 
 This project users [Bower](http://bower.io/) to manage third-party packages related to front-end development, which live in the `bower_components/` directory. In practice, this is mostly useful for getting javascript libraries into your project. The [Bower homepage](http://bower.io/) explains how to install and use it in your project.
 
-We also use SCSS for stylesheet authoring, and Slim for templating. These are opinionated choices, and Middleman doesn't force you to use them, but you'll have to make some `config.rb` changes if you want to use plan HTML, or some other templating system like HAML. 
+We also use SCSS for stylesheet authoring, and Slim for templating. These are opinionated choices, and Middleman doesn't force you to use them, but you'll have to make some `config.rb` changes if you want to use plain HTML, or some other templating system like HAML. 
 
 ### Organization
 
